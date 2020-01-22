@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Статьи</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body style="background: -webkit-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+            -webkit-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+            -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+            -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+            -webkit-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+            -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background: -moz-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+            -moz-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+            -moz-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+            -moz-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+            -moz-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+            -moz-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+            linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+            linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+            linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+            linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+            linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-size: 20px 20px;
+background-color: #131313;">
+
+  <nav class="navbar navbar-expand-lg navbar-default bg-dark">
+  <a class="navbar-brand" href="#">SwisSite</a>
+
+  <div>
+    <ul class="navbar-nav">
+      <li>
+        <a class="btn btn-primary bg-dark" href="/" role="button">Главная</a>
+      </li>
+      <li>
+        <a class="btn btn-primary bg-dark" href="/admin" role="button">Панель администратора</a>
+      </li>
+	</ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row text-center alert">
+      <div class="col-12">
+        <h1 class="display-4" style="color: #FFFFFF">Статьи</h1>
+      </div>
+<div class="row no-gutters bg-light position-relative">
+	{% for tut in tutorials %}
+  <div class="col-md-12 position-static p-4 pl-md-0">
+    <h5 class="mt-0"><p>{{tut.tutorial_title}}</p></h5>
+    <p>{{tut.tutorial_content}}</p>
+    <a href="#"><p>{{tut.tutorial_published}}</p></a>
+  </div>
+  	<br><br>
+{% endfor %}	
+</div>
+    </div>
+  </div>
+
+</body>
+
+</html>
